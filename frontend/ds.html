@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* Main transport card */
+.transcarddiv {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 15px;
+  transition: transform 0.3s ease;
+}
+
+.transcarddiv:hover {
+  transform: scale(1.05);
+}
+
+/* Header section (top part of the card) */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Transport details */
+.transport-details {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.card-p {
+  font-size: 1em;
+  color: #333;
+  margin: 5px 0;
+}
+
+.card-p span {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Travel duration and price */
+.transport-details p strong {
+  color: #2c3e50; /* Dark color for labels */
+}
+
+/* Video on the side */
+.trans-video .acclogovideo {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hidden information section */
+.hidden-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: none; /* Initially hidden */
+}
+
+.transcarddiv:hover .hidden-info {
+  display: block;
+}
+
+.hidden-info p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.hidden-info strong {
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+  <div class="tripcard">
+   <video src="images/16121593.mp4"></video>
+    </div>
+  
+</body>
+</html>

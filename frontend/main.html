@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=logout"
+    />
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-FFssVMFohZNMgCJI-UPK0_sPFUNXyE&libraries=places&callback=initMap" async defer></script> -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-FFssVMFohZNMgCJI-UPK0_sPFUNXyE&libraries=places"></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>Adventuro-Trip planner</title>
+  </head>
+  <body>
+    <div id="body">
+      <div id="header">
+        <div id="logo"><img src="images/logomain.jpg" alt="" /></div>
+        <div id="btnheaders">
+          <button id="mytripbtn">MyTrips</button>
+          <button id="logout">
+            <span class="material-symbols-outlined"> logout </span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="main">
+        <div id="container">
+          <div id="head">
+            <h1>Tell us your travel preferences 🏕️🌴</h1>
+            <p>
+              Just provide some basic information, and our trip planner will
+              generate a customized itinerary based on your preferences.
+            </p>
+          </div>
+          <div id="form">
+            <label for="source">Where are you starting your journey from?</label
+            ><br />
+            <input
+              type="text"
+              id="source"
+              class="input1"
+              placeholder="Ex: Hyderabad"
+            /><br />
+            <label for="destination">What is destination of choice?</label
+            ><br />
+            <input
+              id="destination"
+              class="input1"
+              type="text"
+              placeholder="Ex: Goa"
+            /><br />
+            <label for="days">How many days are you planning your trip?</label
+            ><br />
+            <input
+              id="noofdays"
+              class="input1"
+              type="number"
+              placeholder="Ex: 5 days"
+            />
+          </div>
+          <div id="budget">
+            <h2 id="budgetheading" class="trip_heading">
+              What is Your Budget?
+            </h2>
+            <div id="cards" class="budget-cards">
+              <div id="card1" class="card budget-card" data-budget="low">
+                <h2 id="h21">💵</h2>
+                <h2 id="h22">Cheap</h2>
+                <h2 id="h23">Stay conscious of costs</h2>
+              </div>
+              <div id="card2" class="card budget-card" data-budget="medium">
+                <h2 id="h21">💰</h2>
+                <h2 id="h22">Moderate</h2>
+                <h2 id="h23">Keep cost on the average side</h2>
+              </div>
+              <div id="card3" class="card budget-card" data-budget="high">
+                <h2 id="h21">💸</h2>
+                <h2 id="h22">Luxury</h2>
+                <h2 id="h23">Don't worry about cost</h2>
+              </div>
+            </div>
+          </div>
+
+          <div id="people">
+            <h2 id="budgetheading">
+              Who are you traveling with on this trip?"
+            </h2>
+            <div id="cards2" class="people-cards">
+              <div
+                id="people-card1"
+                class="card people-card"
+                data-people="justme"
+              >
+                <h2 id="h21">✈️</h2>
+                <h2 id="h22">Just Me</h2>
+                <h2 id="h23">A solo traveler in exploration</h2>
+              </div>
+              <div
+                id="people-card2"
+                class="card people-card"
+                data-people="couple"
+              >
+                <h2 id="h21">🥂</h2>
+                <h2 id="h22">A Couple</h2>
+                <h2 id="h23">Two travelers in tandem</h2>
+              </div>
+              <div
+                id="people-card3"
+                class="card people-card"
+                data-people="family"
+              >
+                <h2 id="h21">🏡</h2>
+                <h2 id="h22">Family</h2>
+                <h2 id="h23">A group of fun-loving adventurers</h2>
+              </div>
+              <div
+                id="people-card4"
+                class="card people-card"
+                data-people="friends"
+              >
+                <h2 id="h21">⛵</h2>
+                <h2 id="h22">Friends</h2>
+                <h2 id="h23">A bunch of thrill-seekers</h2>
+              </div>
+            </div>
+          </div>
+
+          <div id="generate">
+            <button id="generatebtn">Get Details</button>
+          </div>
+        </div>
+      </div>
+      <div id="trip_section">
+        <div id="trip_details">
+          <div id="accomdation" class="trip_details_div">
+            <div id="accomheading" class="trip_heading">
+              <h2>Select your accommodation</h2>
+            </div>
+            <div id="acccards" class="tripcards">
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              
+
+            </div>
+          </div>
+
+          <div id="transpotation" class="trip_details_div">
+            <div id="transheading" class="trip_heading">
+              <h2>Select your transportation</h2>
+            </div>
+            <div id="transcards" class="tripcards">
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+            </div>
+          </div>
+
+          <div id="activites" class="trip_details_div">
+            <div id="activitheading" class="trip_heading">
+              <h2>Select activities you want to do at this place</h2>
+            </div>
+            <div id="activiards" class="tripcards">
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+              <div class="tripcard"></div>
+            </div>
+          </div>
+        </div>
+        <div id="generate-plan">
+          <button id="generateplanbtn">Generate plan</button>
+        </div>
+      </div>
+      <div id="planContainer"></div>
+      
+      
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

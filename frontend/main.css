@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+#body {
+  width: 100%;
+  height: 100vh;
+  /* padding:0px 10px; */
+}
+#header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /* margin-bottom: 20px; */
+  background-color: #fff;
+  /* box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+  backdrop-filter: blur(10px); */
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#logo {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f56551;
+  font-size: 20px;
+}
+#logo img {
+  width: 200px;
+  height: 60px;
+}
+#btnheaders {
+  width: 15%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logout {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+#mytripbtn {
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+  color: black;
+  font-size: 18px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+#mytripbtn:hover {
+  background-color: black;
+  color: #fff;
+}
+#logout:hover {
+  background-color: #fff;
+  color: black;
+  border: 0.5px solid black;
+}
+#main {
+  width: 100%;
+  height: 140vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 80px;
+}
+#container {
+  width: 65%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: space-around; */
+  padding: 20px;
+
+  /* background-color: yellow; */
+}
+#head {
+  margin-bottom: 70px;
+}
+#head h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#head p {
+  font-size: 20px;
+  color: rgb(97, 98, 99);
+  font-weight: 400;
+  /* margin-bottom: 40px; */
+}
+#form {
+  width: 100%;
+  height: 300px;
+  /* background: forestgreen; */
+  margin-bottom: 30px;
+}
+#form label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.input1 {
+  margin-bottom: 20px;
+}
+#form input {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+  /* border:none; */
+}
+#budget {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+#budgetheading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#cards {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.card {
+  width: 250px;
+  height: 120px;
+  border: 0.5px solid rgb(173, 173, 171);
+  margin-right: 40px;
+  padding: 10px 0px 0px 10px;
+  border-radius: 7px;
+  transition: all 0.5s;
+}
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#h21 {
+  font-size: 30px;
+}
+#h22 {
+  font-size: 20px;
+  font-weight: 600;
+}
+#h23 {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(97, 98, 99);
+}
+#people {
+  width: 100%;
+  height: 400px;
+  /* background-color: #f56551; */
+  margin-bottom: 20px;
+}
+.card.selected {
+  border: 2px solid #f56551; /* Highlight color when selected */
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.5);
+  /* backdrop-filter: blur(10px); */
+  -webkit-backdrop-filter: blur(10px);
+}
+#cards2 {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#generate {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#generatebtn {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+}
+#generatebtn:hover {
+  background-color: #fff;
+  color: black;
+  border: 0.5px solid black;
+}
+#trip_section {
+  width: 100%;
+  height: 130vh;
+  /* background-color: cadetblue; */
+  padding: 20px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#trip_details {
+  width: 80%;
+  height: 110vh;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.trip_details_div {
+  margin: 10px;
+  width: 80%;
+  height: 35vh;
+  /* background-color:#f56551; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+#transpotation{
+  height: 47vh;
+}
+.trip_heading {
+  width: 100%;
+  height: 50px;
+  /* background: #000; */
+  color: #030303;
+}
+.tripcards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto; /* Enables horizontal scroll */
+  align-items: center;
+  padding: 10px;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+}
+
+.tripcards::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, Opera */
+}
+
+.tripcard {
+  flex: 0 0 30%; /* Flex-basis 30% ensures each card takes up 30% of the container */
+  height: 100%;
+  background: rgba(238, 235, 235, 0.58);
+  border: 1px solid white;
+  border-radius: 17px;
+  text-align: center;
+  /* cursor: pointer; */
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin: 0 10px; /* Adds space between each card */
+}
+
+.tripcard:hover {
+  border: 1px solid black;
+  /* transform: scale(1.05); */
+  /* box-shadow: 0 4px 30px rgba(90, 88, 88, 0.5); */
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+}
+.tripcards:hover > .tripcard:not(:hover) {
+  /* filter: blur(10px); */
+  transform: scale(0.9, 0.9);
+}
+
+.tripcard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+/* Define the shine animation */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.tripcard.shine-effect {
+  background: linear-gradient(
+    110deg,
+    rgba(167, 156, 156, 0.2) 0%,
+    rgba(208, 199, 199, 0.8) 50%,
+    rgba(225, 223, 223, 0.2) 100%
+  );
+  background-size: 200% 100%;
+  animation: shine 2s ease-in-out infinite;
+}
+.card-p{
+  font-size: 10px;
+  font-weight: 400;
+}
+/* Main card container */
+.tripcard {
+  width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tripcard:hover {
+  transform: scale(1.05);
+}
+
+/* Header container for hotel details and video */
+.tripcard-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Hotel name, price, and rating styling */
+.hotel-details {
+  flex: 1;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+  text-align: left;
+  /* background-color:blanchedalmond; */
+}
+
+.hotel-name {
+  font-size:15px;
+  color: #f56551; 
+  /* letter-spacing: 0ch; */
+  margin: 0;
+  text-align: left;
+}
+
+.hotel-price {
+  font-size: 1.1em;
+  
+}
+
+/* Rating below price */
+.hotel-rating {
+  font-size: 1em;
+  color: #f39c12; /* Gold color for rating */
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hotel-rating strong {
+  margin-right: 5px;
+}
+
+/* Video styling - small and animated */
+.acclogovideo {
+  width: 60px;
+  height: 60px;
+  margin-left: 19px;
+  border-radius: 5px;
+  object-fit: cover;
+ 
+}
+
+/* Hidden information section */
+.hidden-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: none; /* Initially hidden */
+  align-items: flex-start;
+  text-align: left;
+}
+
+.tripcard:hover .hidden-info {
+  display: block;
+}
+
+.hidden-info p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.hidden-info strong {
+  color: #333;
+}
+
+
+
+.transcarddiv {
+  padding: 15px;
+}
+
+/* Header section (top part of the transport card) */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Transport details */
+.transport-details {
+  flex: 1;
+  /* margin-right: 10px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.card-p {
+  text-align: left;
+  font-size: 15px;
+  color: #333;
+  /* margin: 5px 0; */
+}
+
+.card-p span {
+  /* font-weight: bold; */
+  color: #2c3e50;
+}
+
+/* Travel duration and price */
+.transport-details p strong {
+  color: #2c3e50; /* Dark color for labels */
+}
+
+/* Video on the side */
+.trans-video .acclogovideo {
+  width: 60px; /* Adjust size as necessary */
+  height: 60px; /* Adjust size as necessary */
+  border-radius: 5px;
+  object-fit: cover;
+  
+}
+
+/* Hidden information section */
+.hidden-info {
+  background-color: #f9f9f9;
+  padding: 10px; /* Adjust padding as needed */
+  border-top: 1px solid #eee;
+  display: none; /* Initially hidden */
+  align-items: flex-start;
+}
+
+.tripcard:hover .hidden-info {
+  display: block; /* Show on hover */
+}
+
+.hidden-info p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.hidden-info strong {
+  color: #333;
+}
+.selected {
+  border: 2px solid #f56551; /* Highlight color when selected */
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.5);
+}
+
+#generateplanbtn{
+  
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+
+}
+#generateplanbtn:hover{
+  background-color: #fff;
+  color: black;
+  border: 0.5px solid black;
+}
+/* Overall Plan Container */
+#planContainer {
+  max-width: 800px; /* Limit the width of the plan */
+  margin: 20px auto; /* Center the container */
+  padding: 20px; /* Padding around the content */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Title Style */
+.vi-plan h2 {
+  font-size: 24px; /* Larger font size for the title */
+  margin-bottom: 10px; /* Space below the title */
+  color: #333; /* Dark color for the title */
+}
+
+/* Duration Style */
+.vi-plan p {
+  font-size: 16px; /* Font size for general text */
+  color: #555; /* Grey color for the text */
+  margin: 5px 0; /* Vertical margin between paragraphs */
+}
+
+/* Itinerary Container */
+.vi-itinerary {
+  margin-top: 20px; /* Space above the itinerary */
+}
+
+/* Day Item */
+.vi-day-1, .vi-day-2, .vi-day-3, .vi-day-4, .vi-day-5,
+.vi-day-6, .vi-day-7, .vi-day-8, .vi-day-9, .vi-day-10 {
+  background-color: #fff; /* White background for each day */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding inside each day */
+  margin-bottom: 15px; /* Space below each day */
+  transition: transform 0.3s; /* Animation on hover */
+}
+
+/* Day Item Hover Effect */
+.vi-day-1:hover, .vi-day-2:hover, .vi-day-3:hover,
+.vi-day-4:hover, .vi-day-5:hover, .vi-day-6:hover,
+.vi-day-7:hover, .vi-day-8:hover, .vi-day-9:hover,
+.vi-day-10:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Day Description Style */
+.vi-day-1 h3, .vi-day-2 h3, .vi-day-3 h3,
+.vi-day-4 h3, .vi-day-5 h3, .vi-day-6 h3,
+.vi-day-7 h3, .vi-day-8 h3, .vi-day-9 h3,
+.vi-day-10 h3 {
+  font-size: 20px; /* Slightly larger for day headers */
+  color: #f56551; /* Blue color for headers */
+}
+
+/* Activities List */
+.vi-day-1 ul, .vi-day-2 ul, .vi-day-3 ul,
+.vi-day-4 ul, .vi-day-5 ul, .vi-day-6 ul,
+.vi-day-7 ul, .vi-day-8 ul, .vi-day-9 ul,
+.vi-day-10 ul {
+  list-style-type: square; /* Square bullets for the activities */
+  padding-left: 20px; /* Indent the list */
+}
+
+/* Activity Item Style */
+.vi-day-1 li, .vi-day-2 li, .vi-day-3 li,
+.vi-day-4 li, .vi-day-5 li, .vi-day-6 li,
+.vi-day-7 li, .vi-day-8 li, .vi-day-9 li,
+.vi-day-10 li {
+  margin-bottom: 8px; /* Space between list items */
+  font-size: 15px; /* Font size for list items */
+  color: #333; /* Dark color for list items */
+}

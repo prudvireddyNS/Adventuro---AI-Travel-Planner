@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #f9f9f9;
+      }
+      #header {
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        /* margin-bottom: 20px; */
+        top: 0;
+        z-index: 10;
+
+        box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 10px 0px 50px;
+      }
+      #logo {
+        /* background-color: aqua; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f56551;
+        font-size: 20px;
+      }
+      #logo img {
+        width: 200px;
+        height: 60px;
+      }
+      #btnheaders {
+        width: 600px;
+        height: 50px;
+        /* background-color: black; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #btnheaders h3 a {
+        text-decoration: none;
+        color: #f56551;
+      }
+
+      /* Header Section */
+      header {
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 100px auto 50px auto;
+        border-radius: 10px;
+        background-color: #fff; /* Card background */
+        max-width: 800px;
+        border: 1px solid #e0e0e0;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 40px;
+        letter-spacing: 1px;
+        color: #f56551; /* Softer orange */
+      }
+
+      header p {
+        margin: 10px 0 0;
+        font-size: 20px;
+        font-weight: 300;
+        color: #555;
+      }
+
+      /* Pricing Section */
+      .pricing-section {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1200px;
+      }
+
+      .pricing-section h1 {
+        font-size: 48px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .pricing-section p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      .pricing-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        transition: transform 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        border-color: #f56551; /* Softer orange */
+      }
+
+      .card h2 {
+        font-size: 28px;
+        color: #f56551; /* Softer orange */
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 48px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .price span {
+        font-size: 24px;
+        color: #777;
+      }
+
+      .features {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      .features li {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #555;
+      }
+
+      .cta-button {
+        background-color: #f56551; /* Softer orange */
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #ef2d14; /* Darker shade of orange */
+      }
+
+      /* Testimonials Section */
+      .testimonials {
+        background-color: #f2f2f2;
+        padding: 50px 20px;
+        margin: 20px 0;
+      }
+
+      .testimonials h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #333;
+      }
+
+      .testimonial-box {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto 30px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-box p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .testimonial-box .author {
+        font-size: 16px;
+        font-weight: bold;
+        color: #f56551; /* Softer orange */
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 50px 20px;
+        background-color: white;
+      }
+
+      .faq-section h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .faq {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .faq h3 {
+        font-size: 20px;
+        color: #f56551; /* Softer orange */
+        margin-bottom: 10px;
+      }
+
+      .faq p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      /* Footer Section */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      /* Responsive Media Query */
+      @media (max-width: 768px) {
+        .pricing-cards {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .card {
+          max-width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header">
+      <div id="logo">
+        <a href="getstarted.html"><img src="images/logomain.jpg" alt="" /></a>
+      </div>
+
+      <div id="btnheaders">
+        <h3><a href="getstarted.html" target="_self">Home</a></h3>
+        <h3><a href="pricing.html" target="_self">Pricing</a></h3>
+        <h3><a href="about.html" target="_self">About Us</a></h3>
+      </div>
+    </div>
+    <header>
+      <h1>Travel Planning Pricing</h1>
+      <p>Affordable plans tailored for your adventures</p>
+    </header>
+
+    <!-- Pricing Section -->
+    <div class="pricing-section">
+      <h1>Our Pricing Plans</h1>
+      <p>
+        Choose a plan that suits your travel needs. No hidden fees, easy
+        upgrades, and flexible cancellation.
+      </p>
+
+      <div class="pricing-cards">
+        <!-- Basic Plan -->
+        <div class="card">
+          <h2>Basic</h2>
+          <p class="price"><span>Free</span></p>
+          <ul class="features">
+            <li>🗺️ Plan up to 2 trips</li>
+            <li>🔧 Access to basic tools</li>
+            <li>📧 Email support</li>
+          </ul>
+          <button class="cta-button">Get Started</button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="card">
+          <h2>Pro</h2>
+          <p class="price"><span>₹499/month</span></p>
+          <ul class="features">
+            <li>🗺️ Plan up to 10 trips</li>
+            <li>🔧 Advanced planning tools</li>
+            <li>🚀 Priority support</li>
+          </ul>
+          <button class="cta-button">Get Started</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="card">
+          <h2>Premium</h2>
+          <p class="price">₹1399<span>/month</span></p>
+          <ul class="features">
+            <li>🗺️ Unlimited trip planning</li>
+            <li>🔧 All premium tools</li>
+            <li>📞 24/7 phone support</li>
+          </ul>
+          <button class="cta-button">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-box">
+        <p>
+          "This travel planner is a game-changer! It made planning my family
+          vacation stress-free."
+        </p>
+        <p class="author">- Sarah J.</p>
+      </div>
+      <div class="testimonial-box">
+        <p>
+          "With the Pro plan, I can handle multiple trips with ease. Highly
+          recommend it!"
+        </p>
+        <p class="author">- John D.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <h3>Can I cancel my plan at any time?</h3>
+        <p>
+          Yes, you can cancel or upgrade your plan at any time without any
+          hidden fees.
+        </p>
+        <h3>What support do I get with each plan?</h3>
+        <p>
+          The Basic plan offers email support, while the Pro and Premium plans
+          include priority and 24/7 phone support, respectively.
+        </p>
+        <h3>Are there any hidden fees?</h3>
+        <p>
+          No! We believe in transparent pricing. What you see is what you pay.
+        </p>
+      </div>
+    </div>
+
+  
+  </body>
+</html>

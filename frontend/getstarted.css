@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+#body {
+  width: 100%;
+  height: 100vh;
+  /* padding:0px 10px; */
+}
+#header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  /* margin-bottom: 20px; */
+  background-color: #ffffff;
+
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+  /* backdrop-filter: blur(5px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 0px 50px;
+}
+#logo {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f56551;
+  font-size: 20px;
+}
+#logo img {
+  width: 200px;
+  height: 60px;
+}
+#btnheaders{
+  width: 600px;
+  height: 50px;
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#btnheaders h3 a{
+  text-decoration: none;
+  color: #f56551;
+}
+
+
+
+#btnheaders button {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+#hero img {
+  width: 97%;
+  height: 350px;
+  margin-left: 30px;
+  margin-top: 80px;
+  object-fit: fill;
+  border-radius: 7px;
+}
+
+#main {
+  width: 100%;
+  height: 90vh;
+  /* background-color: gold; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: stretch; */
+  align-items: center;
+}
+#heading1 h1 {
+  margin-top: 50px;
+  font-size: 50px;
+  color: #f56551;
+  font-weight: 700;
+  /* line-height: 2px; */
+}
+#heading2 h1 {
+  margin-top: 10px;
+  font-size: 60px;
+  color: #0f0f0f;
+  font-weight: 500;
+  /* line-height: 2px; */
+}
+#heading3 h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #737373;
+  font-weight: 300;
+  /* line-height: 2px; */
+}
+#btn button {
+  margin-top: 50px;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+/* a {
+  color: #fff;
+  text-decoration: none;
+} *//* Modal container */
+#modal_main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: none; /* Hide by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px); /* Blurring the entire background */
+}
+
+/* Modal content */
+#main2, #main3 {
+  width: 65%;
+  height: 85vh;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+/* Transition for smooth show/hide effect */
+.show {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Hero images */
+#hero2, #hero3 {
+  width: 45%;
+  height: 80vh;
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#hero2 img, #hero3 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+/* Signup/Login forms */
+#signup, #login {
+  width: 45%;
+  height: 80vh;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#signup h1, #login h1 {
+  margin-top: 50px;
+  /* margin-left: 30px; */
+  color: #f56551;
+}
+
+#form, #loginf {
+  width: 100%;
+  height: 350px;
+  /* background-color:aqua; */
+  padding: 10px;
+  margin-top: 40px;
+}
+
+#form label, #loginf label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#form input, #loginf input {
+  width: 100%;
+  /* margin-bottom: 10px; */
+  height: 30px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-color: black;
+  box-shadow: 0 0 5px rgba(13, 13, 13, 0.5);
+}
+
+#creataccbtn button, #loginf button {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: aliceblue;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+#signup p {
+  margin-top: 10px;
+  margin-left: 70px;
+  font-size:15px;
+}
+#loginf h5 {
+  margin-top: 10px;
+  margin-left: 45px;
+  font-size:15px;
+}
+
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 5px;
+}
+
+.close-button:hover {
+  background-color: #ccc;
+  border-radius: 7px;
+  box-shadow: 0 4px 30px rgba(90, 88, 88, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: black;
+  background-color: #ccc;
+  font-size: 16px;
+  z-index: 1000;
+  width: 300px;
+}
+
+.success {
+  /* background-color: #4CAF50; Green */
+  border-left: 5px solid #2e7d32;
+}
+
+.failure {
+  /* background-color: #f44336; Red */
+  border-left: 5px solid #c62828;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 10px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="getstarted.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="body">
+      <div id="header">
+        <div id="logo"><a href="getstarted.html"><img src="images/logomain.jpg" alt="" /></a></div>
+        
+           
+        
+       
+        <div id="btnheaders">
+          <h3><a href="getstarted.html"target="_self">Home</a></h3>
+          <h3><a href="pricing.html" target="_self">Pricing</a></h3>
+          <h3><a href="about.html" target="_self">About Us</a></h3>
+          <button id="Sign">SignUp / SignIn</button>
+        </div>
+      </div>
+      <div id="hero">
+        <img src="images/main.jpg" alt="" />
+      </div>
+      <div id="main">
+        <div id="heading1"><h1>Discover Your Next Adventure with AI:</h1></div>
+        <div id="heading2">
+          <h1>Personalized Itineraries at Your Fingertips</h1>
+        </div>
+        <div id="heading3">
+          <h4>
+            Your personal trip planner and travel curator, creating custom
+            itineraries tailored to your interests and budget.
+          </h4>
+        </div>
+        <div id="btn"><button id="get_started_btn">Get Started, it's Free</button></div>
+      </div>
+      <div id="aboutAdventuro">
+        <div id="Adventuroinfo"></div>
+        <div id="Adventurophoto"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div id="modal_main">
+        <div id="popup" class="popup">
+          <p id="popup-message"></p>
+          <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+          <div id="main2">
+            <div id="close_signup" class="close-button">
+              <span class="material-symbols-outlined">close</span>
+            </div>
+            <div id="hero2">
+              <img class="cropped-img" src="images/signup.jpg" alt="" />
+            </div>
+            <div id="signup">
+              <h1>Begin Your Adventure</h1>
+              <div id="form">
+                <label for="name">Name</label><br />
+                <input
+                  type="text"
+                  name="name"
+                  id="input1"
+                  placeholder="Enter Your name"
+                /><br />
+                <label for="username">Username :</label><br />
+                <input
+                  type="text"
+                  name="username"
+                  id="input2"
+                  placeholder="Enter Your Username"
+                /><br />
+                <label for="email">Email :</label><br />
+                <input
+                  type="email"
+                  name="email"
+                  id="input3"
+                  placeholder="Enter your email"
+                /><br />
+                
+                <label for="number">Phone Number :</label><br />
+                <input
+                  type="number"
+                  name="number"
+                  id="input4"
+                  placeholder="Enter Your Phone Number"
+                /><br />
+                <label for="password">Create Password :</label><br />
+                <input
+                  type="password"
+                  name="password"
+                  id="input5"
+                  placeholder="Enter Your Password"
+                /><br />
+                <label for="password">Confirm Password :</label><br />
+                <input
+                  type="password"
+                  name="password"
+                  id="input6"
+                  placeholder="Enter Your Password"
+                /><br />
+              </div>
+              <div id="creataccbtn">
+                <button id="createbtn">Create Account</button>
+              </div>
+              <p>
+                Already have an account? <a href="#" id="show_login">Login</a>
+              </p>
+            </div>
+          </div>
+
+          <div id="main3" style="display: none">
+            <div id="close_login" class="close-button">
+              <span class="material-symbols-outlined">close</span>
+            </div>
+            <div id="login">
+              <div id="headings">
+                <h1>Welcome Back, Explorer!</h1>
+                
+              </div>
+              <div id="loginf">
+                <label for="email">Email</label><br />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email to continue your adventure"
+                  id="loginemail"
+                />
+                <br />
+                <label for="password">Password</label><br />
+                <input
+                  type="password"
+                  placeholder="Enter your password to access your trips"
+                  id="password" 
+                  name="loginpassword"
+                />
+                <button id="loginbtn">Login</button>
+                <h5>
+                  New Here? <a href="#" id="show_signup">Sign Up</a> to Explore
+                  the World!
+                </h5>
+              </div>
+            </div>
+            <div id="hero3">
+              <img class="cropped-img" src="images/loginpagepic.jpg" alt="" />
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="getstarted.js"></script>
+  </body>
+</html>

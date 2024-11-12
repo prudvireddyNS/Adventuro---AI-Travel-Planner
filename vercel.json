@@ -1,7 +1,5 @@
 {
-  "projectSettings": {
-    "framework": null
-  },
+ 
   "builds": [
     { "src": "frontend/**", "use": "@vercel/static" }
   ]
